@@ -1,0 +1,10 @@
+[Unit]
+Description = pi-motion-camera
+
+[Service]
+ExecStart = /usr/bin/motion -c /etc/motion/motion-mmalcam-both.conf
+Restart = always
+Type = simple
+
+[Install]
+WantedBy = multi-user.target
