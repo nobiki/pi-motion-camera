@@ -27,10 +27,10 @@ if __name__ == "__main__":
     if file_path.find("preview.jpg") > 0:
         slack = Slack(os.environ.get("SLACK_API_TOKEN"))
         slack.post_to_file(file_path, os.environ.get("SLACK_CHANNEL_ID"))
-        slack.post_to_message("動きを検知しました", os.environ.get("SLACK_CHANNEL_ID"))
+        slack.post_to_message(":camera_with_flash: 動きを検知しました", os.environ.get("SLACK_CHANNEL_ID"))
         print("posted to slack - "+file_path)
     else:
         # slack = Slack(os.environ.get("SLACK_API_TOKEN"))
-        # slack.post_to_message("てすと", os.environ.get("SLACK_CHANNEL_ID"))
+        # slack.post_to_message(":camera_with_flash: てすと", os.environ.get("SLACK_CHANNEL_ID"))
         print("skip - "+file_path)
 
