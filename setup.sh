@@ -5,3 +5,4 @@ sudo pip install slacker python-dotenv
 
 sudo ln -s ${PWD}/motion-mmalcam-both.conf /etc/motion/motion-mmalcam-both.conf
 sudo ln -s ${PWD}/pi-motion-camera.service /etc/systemd/system/pi-motion-camera.service
+sudo systemctl daemon-reload
